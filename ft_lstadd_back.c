@@ -2,8 +2,11 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (lst)
-		lst = lst -> next;
+	if(!lst || !new)
+		return ;
+	while (*lst)
+		(*lst) = (*lst) -> next;
+	*lst = new;
 }
 
 int main()
@@ -32,4 +35,6 @@ int main()
 	new -> content = str5;
 
 	ft_lstadd_back(&head, new);
+
+	printf("%s",(char *)head->content );
 }

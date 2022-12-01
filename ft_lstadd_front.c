@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 20:41:25 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/01 17:32:24 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/01 22:45:11 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void    ft_lstadd(t_list **lst, t_list *new)
 	if(!lst || !new)
 		return;
 	new -> next = *lst;
-	lst = &new;
+	*lst = new;
 }
 /**
  * 
