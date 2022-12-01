@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:41:12 by kichlee           #+#    #+#             */
-/*   Updated: 2022/11/26 13:27:59 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/11/27 16:47:29 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,13 @@ void * ft_memset(void *b, int n, size_t length){
     size_t i;
 
     i = 0;
-
     while(i < length){
-       ((char *)b)[i] = n;
+       ((unsigned char *)b)[i] = n;
        i++;
     }
 
     return (b);
 }
-/**
- * 
- * void 형으로 들어오는게 int일수도 char * 형일수도 있는데?
- * 넣어주는 값은 어떤 걸로 해주는 거지
- * /
- * 
-*/
-
 
 int main(){
 
@@ -51,5 +42,5 @@ int main(){
 
     string2 = string3;
     
-    printf("%s",string2);
+    printf("%s",string);
 }

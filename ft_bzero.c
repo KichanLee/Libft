@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include "test.h"
 
-// 채워준다는 게 숫자 0 ? / 문자 '0' ? / 아스키코드 0 ?
+// 채워준다는 게 숫자 0 == 아스키코드 0 Nul
 void    ft_bzero(void *s, size_t n)
 {  
     size_t  i;
-
+    // unsigned char 한바이트씩 바꿔주는 char 1byte 인데 
     i = 0;
 
     while(i < n){

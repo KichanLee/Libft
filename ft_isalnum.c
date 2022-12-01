@@ -6,11 +6,11 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 15:33:59 by kichlee           #+#    #+#             */
-/*   Updated: 2022/11/13 15:34:37 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/11/27 14:37:55 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "head.h"
+#include "libft.h"
 
 int ft_isalnum(int an){
     
