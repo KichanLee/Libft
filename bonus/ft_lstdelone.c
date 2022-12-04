@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 17:33:16 by wonhshin          #+#    #+#             */
-/*   Updated: 2022/12/01 22:26:50 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:12:38 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,18 @@ int main()
 	t_list *three = malloc(sizeof(t_list));
 	t_list *new = malloc(sizeof(t_list));
 
-	char *str = malloc(5);
-	str = "이기찬";
-
+	char str1[10] = "이기찬";
 	
-	//char str2 = "2기찬";
+	char *str2 = malloc(4);
+
+	for(int i = 0; i < 3; ++i)
+	{
+		str2[i] = str1[i];
+	}
+
+
+	printf("str2 : %s", str2);
+	
 	//char str3 = "3기찬";
 	//char str4 = "4기찬";
 	//char str5 = "정준하";
@@ -59,10 +66,11 @@ int main()
 
 	printf("%s", (char *)head->content);
 	ft_lstdelone(head, head->content);
+
 	printf("%s", (char *)head->content);
 			
-	//ft_lstdelone(head, head->content);
+	ft_lstdelone(head, head->content);
 
-	//printf("%s", (char *)head->content);
+	printf("%s", (char *)head->content);
 		
 }
