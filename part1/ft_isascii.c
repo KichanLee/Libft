@@ -6,14 +6,13 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 15:34:06 by kichlee           #+#    #+#             */
-/*   Updated: 2022/11/13 15:34:30 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/07 17:55:15 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c){
-    
-    if(c >= 0 && c <= 127){
-        return (1);
-    }
-    return (0);
+int	ft_isascii(int c)
+{	
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

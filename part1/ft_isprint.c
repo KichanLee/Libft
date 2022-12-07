@@ -6,13 +6,13 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 15:34:10 by kichlee           #+#    #+#             */
-/*   Updated: 2022/11/13 15:34:32 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/07 17:56:06 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c){
-    if(c >= 32 && c<= 126){
-        return (1);
-    }
-    return (0);
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
