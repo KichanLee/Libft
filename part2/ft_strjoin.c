@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 21:38:54 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/05 21:44:59 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/08 18:08:09 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //{
 //	char *str1 = "abcde"; 
 //	char *str2 = "12345";
-
 //	char *test1 = ft_strjoin(str1, str2);
-
 //	printf("%s", test1);
 //}

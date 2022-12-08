@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 16:59:24 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 22:20:56 by kichlee          ###   ########.fr       */
+/*   Created: 2022/12/08 17:09:48 by kichlee           #+#    #+#             */
+/*   Updated: 2022/12/08 17:45:16 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+size_t	strlcat(char * dst, const char *  src, size_t dstsize)
 {
-	write(fd, s, sizeof(s));
+		
 }

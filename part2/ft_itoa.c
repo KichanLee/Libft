@@ -1,12 +1,22 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/08 21:21:31 by kichlee           #+#    #+#             */
+/*   Updated: 2022/12/08 21:23:09 by kichlee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-long ft_len(int n)
+#include <stdlib.h>
+
+long	ft_len(int n)
 {
 	long	i;
 
 	i = 0;
-
 	if (n == 0)
 		return (1);
 	if (n < 0)
@@ -33,12 +43,11 @@ char	*ft_itoa(int n)
 	n_size = ft_len(n);
 	str = malloc(n_size + 1);
 	i = 0;
-
-	if(!str)
+	if (!str)
 		return (0);
-	if(l_n == 0)
+	if (l_n == 0)
 		str[0] = '0';
-	if(l_n < 0)
+	if (l_n < 0)
 	{
 		str[0] = '-';
 		l_n *= -1;
@@ -46,27 +55,24 @@ char	*ft_itoa(int n)
 	str[n_size] = '\0';
 	while (l_n > 0)
 	{
-		str[--n_size] =  l_n % 10 + '0';
+		str[--n_size] = l_n % 10 + '0';
 		l_n /= 10;
 	}
-
 	return (str);
 }
 
-int main()
-{
-	int num = 100;
-	int num2 = -123123;
-	int num3 = 1;
-	int num4 = 0;
-	int num5 = -2147483648;
-	int num6 = 2147483647;
-
-	printf("num itoa after : %s\n", ft_itoa(num));
-	printf("num2 itoa after : %s\n", ft_itoa(num2));
-	printf("num3 itoa after : %s\n", ft_itoa(num3));
-	printf("num4 itoa after : %s\n", ft_itoa(num4));
-	printf("num5 itoa after : %s\n", ft_itoa(num5));
-	printf("num6 itoa after : %s\n", ft_itoa(num6));
-
-}
+//int main()
+//{
+//	int num = 100;
+//	int num2 = -123123;
+//	int num3 = 1;
+//	int num4 = 0;
+//	int num5 = -2147483648;
+//	int num6 = 2147483647;
+//	printf("num itoa after : %s\n", ft_itoa(num));
+//	printf("num2 itoa after : %s\n", ft_itoa(num2));
+//	printf("num3 itoa after : %s\n", ft_itoa(num3));
+//	printf("num4 itoa after : %s\n", ft_itoa(num4));
+//	printf("num5 itoa after : %s\n", ft_itoa(num5));
+//	printf("num6 itoa after : %s\n", ft_itoa(num6));
+//}

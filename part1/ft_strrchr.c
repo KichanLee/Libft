@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 21:50:35 by kichlee           #+#    #+#             */
-/*   Updated: 2022/11/27 17:48:17 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/08 17:46:53 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ char	*ft_strrchr(const char *s, int c)
 		cp++;
 	}
     --cp;
-   
-    
     while (cp[i])
     {
         if(cp[i] == (unsigned char) c)
