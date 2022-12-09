@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:04:39 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 17:07:19 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/09 16:23:39 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ size_t	t_strlen(const char *str)
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
 	size_t	src_len;
-	int		i;
+	size_t		i;
 
 	i = 0;
 	src_len = t_strlen(src);

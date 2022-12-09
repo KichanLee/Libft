@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:00:40 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 22:07:52 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/09 16:18:35 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char change(unsigned int num, char a)
 	char ch = 'c';
 	return ch;
 }
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
@@ -49,7 +48,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 //	char ch = 'a';
 //	char (*f)(unsigned int, char)= change;
 	
-//	printf("f function :%c\n", (*f)(i, ch));
+//	//printf("f function :%c\n", f(i, ch));
 	
+//	test = ft_strmapi(str, f);
+//	test = strmapi(str, f);
+
 //	printf("test : %s", test);
 //}
