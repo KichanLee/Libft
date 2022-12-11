@@ -6,14 +6,14 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:21:00 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/09 18:47:11 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/10 21:24:34 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void	free_all(char **str, size_t i)
+char	**free_all(char **str, size_t i)
 {
 	size_t	j;
 
@@ -21,10 +21,11 @@ void	free_all(char **str, size_t i)
 	while (j < i)
 	{
 		free(str[j]);
-		str[j++] = 0;
+		j++;
 	}
 	free (str);
 	str = 0;
+	return (0);
 }
 
 int	count_str(char const *str, char ch)
@@ -36,12 +37,12 @@ int	count_str(char const *str, char ch)
 	cnt = 0;
 	while (*str)
 	{
-		if (flag == 1 && (*str) == ch)
+		if (flag == 1 && (*str) != ch)
 		{
 			flag = 0;
 			cnt ++;
 		}
-		if (flag == 0 && (*str) != ch)
+		if (flag == 0 && (*str) == ch)
 			flag = 1;
 		str++;
 	}
@@ -67,11 +68,11 @@ char	*put_word(char const *str, char ch)
 	i = 0;
 	len_word = str_len_ex_sep(str, ch);
 	word = (char *)malloc(sizeof(char) * (len_word + 1));
+	if (!word)
+		return (0);
 	while (i < len_word)
 	{
 		word[i] = str[i];
-		if (!word[i])
-			(free_all(&word, i));
 		i++;
 	}
 	word[i] = '\0';
@@ -91,33 +92,34 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	while (*s != '\0')
 	{
-		while (*s && ((*s) == '-'))
+		while (*s && ((*s) == c))
 			s++;
 		if (*s)
 		{
 			string[i] = put_word(s, c);
 			if (!string[i])
-				free_all(string, i);
+				return (free_all(string, i));
 			i++;
 		}
-		while (*s && ((*s) != '-'))
+		while (*s && ((*s) != c))
 			s++;
 	}
 	string[i] = 0;
 	return (string);
 }
-
-#include <stdio.h>
-int main()
-{
-	int i = 0;
-	char **sk;
-	char str[] = "010-5706-5136-0847-010";
-	sk = ft_split(str, '-');
-	while(sk[i])
-	{
-		printf("%s\n", sk[i]);
-		i++;
-	}
-	return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	int i = 0;
+// 	char **sk;
+// 	char str[] = "hello!";
+// 	sk = ft_split(str, ' ');
+// 	if(!sk)
+// 		return 0;
+// 	while(sk[i])
+// 	{
+// 		printf("%s\n", sk[i]);
+// 		i++;
+// 	}
+// 	return 0;
+//}

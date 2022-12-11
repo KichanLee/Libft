@@ -6,12 +6,9 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 16:20:54 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 17:51:54 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/12 00:02:14 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdlib.h>
-#include<stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -39,16 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * minus);
 }
-
-//int main()
-//{
-//	const char *str = "1235215";
-//	const char *str2 = "-1243014";
-//	const char *str3 = "000";
-//	printf("original function : %d\n", atoi(str));
-//	printf("my		 function : %d\n", ft_atoi(str));
-//	printf("original function : %d\n", atoi(str2));
-//	printf("my		 function : %d\n", ft_atoi(str2));
-//	printf("original function : %d\n", atoi(str3));
-//	printf("my		 function : %d\n", ft_atoi(str3));
-//}

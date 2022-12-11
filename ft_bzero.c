@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 19:25:42 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/07 19:49:44 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/11 20:42:43 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,21 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-// int main(){
+ int main(){
 
-//	 char str2[10] = "123456789";
-//	 char str3[10] = "abcdefg";
-//	 char *str4 =  "asfv";
+	 char str2[10] = "123456789";
+	 char str3[10] = "abcdefg";
+	 char *str4 =  "asfv";
 
-//	ft_bzero(str2, 7);
-//	//bzero(str2, 7);
-//	printf("%c", str2[8]);
-// }
+	int arr[5] = {1, 2, 3, 4, 5};
+	ft_bzero(arr, 16);
+
+	for(int i = 0; i < 5; ++i)
+	{
+		printf("%d :", arr[i]);
+	}
+
+	//ft_bzero(str2, 7);
+	////bzero(str2, 7);
+	//printf("%c", str2[8]);
+ }

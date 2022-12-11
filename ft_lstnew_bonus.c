@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 19:07:56 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/09 20:01:13 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/11 22:09:42 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,18 @@ t_list	*ft_lstnew(void *content)
 	return (list);
 }
 
-//int main()
-//{
-//	t_list	* l1;
-//	t_list	* l2;
-//	char *str = "12345";
-//	int arr[5]= {1, 2, 3, 4, 5};
-//	int *arr2 = arr;
-//	l1 = ft_lstnew(str);
-//	l2 = ft_lstnew(arr2);
-//	printf("%s\n", (char *) l1->content);
-//	printf("-------------------------------\n");
-//	for(int i = 0; i < 5; ++i)
-//		printf("%d ", ((int *)l2->content)[i]);
-//}
+int main()
+{
+	t_list	* l1;
+	t_list	* l2;
+	char *str = "12345";
+	int arr[5]= {1, 2, 3, 4, 5};
+	int *arr2 = arr;
+	l1 = ft_lstnew(str);
+	l2 = ft_lstnew(arr2);
+	printf("%s\n", (char *) l1->content);
+	printf("-------------------------------\n");
+	
+	for(int i = 0; i < 5; ++i)
+		printf("%d ", ((int *)l2->content)[i]);
+}

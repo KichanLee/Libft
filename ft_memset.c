@@ -6,12 +6,12 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:41:12 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/07 21:09:46 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/11 19:07:16 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <string.h>
 void	*ft_memset(void *b, int n, size_t length)
 {
 	size_t	i;
@@ -25,14 +25,14 @@ void	*ft_memset(void *b, int n, size_t length)
 	return (b);
 }
 
-//int main(){
-//	char buffer[10];
-//	char buffer2[10];
-//	char *string =  "aaaaaaaa";
-//	char *string2 = "abcdef";
-//	char *string3 = "12345";
-//	string = (char *) ft_memset(buffer, -15, 10);
-//	string2 = (char *) memset(buffer2, -15, 10);
-//	printf("string : %s\n",string);
-//	printf("string2 : %s\n",string2);
-//}
+int main(){
+	char buffer[10];
+	char buffer2[10];
+	char *string =  "aaaaaaaa";
+	char *string2 = "abcdef";
+	char *string3 = "12345";
+	string = (char *) ft_memset(buffer, 1, 10);
+	string2 = (char *) memset(buffer2, 1, 10);
+	printf("string : %s\n",string);
+	printf("string2 : %s\n",string2);
+}

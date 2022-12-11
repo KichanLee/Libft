@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 20:50:52 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/09 21:10:32 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/10 22:22:22 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,6 @@
 #include<string.h>
 #include<stdio.h>
 #include "libft.h"
-
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		++i;
-	return (i);
-}
-
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {

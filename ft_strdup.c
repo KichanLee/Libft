@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:52:22 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 17:52:50 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/10 22:35:27 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strdup(const char *s1)
 //{
 //	char *test = "kichan";
 //	char *test1 = 0;
-	//	char *str1 = strdup(test);
+//	char *str1 = strdup(test);
 //	char *str2 = ft_strdup(test);
 //	char *str3 = strdup(test1);
 //	char *str4 = ft_strdup(test1);
