@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:33:24 by kichlee           #+#    #+#             */
-/*   Updated: 2022/11/26 12:37:24 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/12 16:14:43 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t t)
 	}
 	return (0);
 }
-
-//#include<stdio.h>
-//#include<string.h>
-
-//int main(){
-
-//    char *str1 = "ABCD";
-//    char *str2 = "ABCDE";
-//    char *str3 = "12345";
-//    char *str4 = "aa1111";
-
-//    printf("original fucntion : %d\n", strncmp(str1, str2,3));
-//    printf("my own function : %d\n", ft_strncmp(str1, str2, 3));
-//    printf("original fucntion %d\n", strncmp(str3, str4, 3));
-//    printf("my own function : %d\n", ft_strncmp(str3, str4, 3));
-//}

@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:47:52 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/09 16:29:39 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/12 16:03:06 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-//int main () {
-//	const char str[] = "http:www.tutorialspoint.com";
-//	const char ch = 'p';
-//	char *ret;
-//	char *ret2;
-//	ret = memchr(str, ch, strlen(str));
-//	ret2 = ft_memchr(str, ch, strlen(str));
-//	printf("---------------------------------------------------------------\n");
-//	printf("original function : String after |%c| is - |%s|\n", ch, ret);
-//	printf("my       function : String after |%c| is - |%s|\n", ch, ret2);
-//	printf("---------------------------------------------------------------\n");
-
-//   return(0);
-//}

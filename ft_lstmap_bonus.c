@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:49:04 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/11 21:34:25 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/12 15:51:51 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		{
 			ft_lstclear(&tmp, del3);
 			return  (0);
-		}
-		return (0);
 		}
 		ft_lstadd_back(&head, tmp);
 		lst = lst->next;
