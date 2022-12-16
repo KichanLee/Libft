@@ -6,29 +6,15 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 21:14:42 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/12 15:33:12 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/14 19:37:20 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	unsigned char	ch;
-
-	ch = (unsigned char) c;
-	if (ch >= 'A' && ch <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
-		ch += 32;
+		c += 32;
 	}
-	return ((int) ch);
+	return (c);
 }
-
- int main(){
-     char str[20] = "ABCDEF";
-     int i = 0;
-     char ch;
-     while (str[i]){
-         putchar(ft_tolower(str[i]));
-         ++i;
-     }
-     return (0);
- }

@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:21:31 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 21:23:09 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/14 13:58:33 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,19 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-//int main()
-//{
-//	int num = 100;
-//	int num2 = -123123;
-//	int num3 = 1;
-//	int num4 = 0;
-//	int num5 = -2147483648;
-//	int num6 = 2147483647;
-//	printf("num itoa after : %s\n", ft_itoa(num));
-//	printf("num2 itoa after : %s\n", ft_itoa(num2));
-//	printf("num3 itoa after : %s\n", ft_itoa(num3));
-//	printf("num4 itoa after : %s\n", ft_itoa(num4));
-//	printf("num5 itoa after : %s\n", ft_itoa(num5));
-//	printf("num6 itoa after : %s\n", ft_itoa(num6));
-//}

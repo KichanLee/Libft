@@ -6,12 +6,11 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 16:56:08 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/12 16:26:40 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/14 13:00:15 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include<stdio.h>
 
 void	*ft_calloc(size_t c, size_t s)
 {
@@ -28,17 +27,4 @@ void	*ft_calloc(size_t c, size_t s)
 		++i;
 	}
 	return (ptr);
-}
-
-int main(){
-	int size = 3;
-	int *arr;
-	arr = (int *)ft_calloc(5, sizeof(int));
-	for(int i = 0; i < 5; ++i)
-	{
-		printf("\n");
-		printf("before allocation : %d\n", arr[i]);
-		arr[i] = i;
-		printf("after allocation : %d\n ", arr[i]);
-	}
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 16:34:40 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 22:22:51 by kichlee          ###   ########.fr       */
+/*   Created: 2022/12/16 17:53:49 by kichlee           #+#    #+#             */
+/*   Updated: 2022/12/16 17:54:07 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,24 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
+	char	ch;
 
-	str = ft_itoa(n);
-	write(fd, str, sizeof(str) + 1);
-	write(fd, "\n", 1);
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ch = '0' + n % 10;
+	}
+	else
+		ch = '0' + n;
+	write(fd, &ch, 1);
 }

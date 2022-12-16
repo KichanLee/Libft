@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:24:04 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 22:18:09 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/16 12:28:29 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		return ;
 	if (!f)
 		return ;
-	f(i, s);
+	while (s[i])
+	{
+		f(i, &s[i]);
+		++i;
+	}
 }
-
-//#include <stdio.h>
-
-//int main()
-//{
-//	printf("%s", "lkc");
-//}

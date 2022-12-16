@@ -6,11 +6,10 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:21:00 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/10 21:24:34 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/14 13:17:46 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 char	**free_all(char **str, size_t i)
@@ -107,19 +106,3 @@ char	**ft_split(char const *s, char c)
 	string[i] = 0;
 	return (string);
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	int i = 0;
-// 	char **sk;
-// 	char str[] = "hello!";
-// 	sk = ft_split(str, ' ');
-// 	if(!sk)
-// 		return 0;
-// 	while(sk[i])
-// 	{
-// 		printf("%s\n", sk[i]);
-// 		i++;
-// 	}
-// 	return 0;
-//}

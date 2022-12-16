@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:33:24 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/12 16:14:43 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/16 18:18:54 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t t)
 	size_t	s;
 
 	s = 0;
-	while ((*s1 && *s2) && t > s)
+	while ((unsigned char)(*s1) && s < t)
 	{
-		if (*s1 != *s2)
+		if ((unsigned char)*s1 != (unsigned char)*s2)
 		{
-			return (*s1 - *s2);
+			return ((unsigned char)*s1 - (unsigned char)*s2);
 		}
 		++s1;
 		++s2;
-		--s;
+		++s;
 	}
+	if ((unsigned char)*s1 == '\0' && s < t)
+		return ((unsigned char)*s1 - (unsigned char)*s2);
 	return (0);
 }

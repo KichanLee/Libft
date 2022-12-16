@@ -5,49 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 20:50:52 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/10 22:22:22 by kichlee          ###   ########.fr       */
+/*   Created: 2022/12/16 17:30:06 by kichlee           #+#    #+#             */
+/*   Updated: 2022/12/16 19:18:23 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<string.h>
-#include<stdio.h>
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+size_t	ft_strlen_d(const char *ch)
 {
-    int     length;
-    size_t  i;
-    size_t  s_len;
+	size_t	i;
 
-    length = len - start;
-    s_len = ft_strlen(s);
-    i = 0;
-    char *string;
-    if(!s)
-        return (NULL);
-    string = (char *)malloc(sizeof(char) * (5));
-    if(!string)
-        return (NULL);
-    while (i < len)
-    {
-        string[i] = s[start + i];
-        i++;
-    }
-    string[i] = 0;
-    return (string);
+	i = 0;
+	while (ch[i])
+		++i;
+	return (i);
 }
 
-
-int main()
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char origin[500] = "abcde12345\0";
-	char *rst;
-	int idx_start=3, len=7;
+	char	*string;
+	size_t	size;
+	size_t	i;
 
-	printf("origin string\t[%s]\n", origin);
-	printf("start\t\t[%d]\nlen\t\t[%d]\n", idx_start, len);
-	rst = ft_substr(origin, idx_start, len);
-	printf("result\t\t[%s]\n", rst);
+	i = 0;
+	if (start > ft_strlen_d(s))
+		size = 0;
+	else if (len > ft_strlen_d(s + start))
+		size = ft_strlen_d(s + start);
+	else
+		size = len;
+	string = (char *)malloc(sizeof(char) * (size + 1));
+	if (!string || !s)
+		return (NULL);
+	if (size)
+		while (i < len && s[start])
+			string[i++] = s[start++];
+	string[i] = '\0';
+	return (string);
 }

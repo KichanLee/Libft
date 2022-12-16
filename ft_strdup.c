@@ -6,13 +6,11 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:52:22 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/10 22:35:27 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/14 18:14:09 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
-#include<string.h>
-#include<stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,21 +31,8 @@ char	*ft_strdup(const char *s1)
 		s1++;
 		str++;
 	}
+	*str = '\0';
 	while (len--)
 		--str;
 	return (str);
 }
-
-//int main()
-//{
-//	char *test = "kichan";
-//	char *test1 = 0;
-//	char *str1 = strdup(test);
-//	char *str2 = ft_strdup(test);
-//	char *str3 = strdup(test1);
-//	char *str4 = ft_strdup(test1);
-//	printf("origianl function : %s\n",str1);
-//	printf("my		 function : %s\n", str1);
-//	printf("origianl function : %s\n",str2);
-//	printf("my		 function : %s\n", str2);
-//}

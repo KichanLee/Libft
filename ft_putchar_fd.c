@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:15:07 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 22:20:44 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/14 16:26:04 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, "c", 1);
+	write(fd, &c, 1);
 }

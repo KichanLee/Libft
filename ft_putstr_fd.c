@@ -6,13 +6,15 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:59:24 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 22:20:56 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/16 21:44:19 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, sizeof(s));
+	if (!fd || !s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

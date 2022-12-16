@@ -6,22 +6,11 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 21:38:54 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/08 18:08:09 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/16 19:28:03 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-int	ft_strlen(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		++i;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -34,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	t_len = ft_strlen(s1) + ft_strlen(s2);
 	str = malloc(t_len + 1);
+	if (!str)
+		return (0);
 	while (i < ft_strlen(s1))
 	{
 		str[i] = s1[i];
@@ -48,11 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-
-//int main()
-//{
-//	char *str1 = "abcde"; 
-//	char *str2 = "12345";
-//	char *test1 = ft_strjoin(str1, str2);
-//	printf("%s", test1);
-//}
