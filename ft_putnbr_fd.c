@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 17:53:49 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/16 17:54:07 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/16 23:09:12 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	ch;
 
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);

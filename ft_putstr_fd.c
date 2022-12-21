@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:59:24 by kichlee           #+#    #+#             */
-/*   Updated: 2022/12/16 21:44:19 by kichlee          ###   ########.fr       */
+/*   Updated: 2022/12/16 21:47:17 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!fd || !s)
+	if (fd < 0 || !s)
 		return ;
 	write(fd, s, ft_strlen(s));
 }

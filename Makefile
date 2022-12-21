@@ -60,7 +60,7 @@ else
 endif
 
 all: $(NAME)
-	sleep 1
+
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
